@@ -102,7 +102,4 @@ function isProbablyReaderable(doc, options = {}) {
   });
 }
 
-if (typeof module === "object") {
-  /* global module */
-  module.exports = isProbablyReaderable;
-}
+export default isProbablyReaderable;

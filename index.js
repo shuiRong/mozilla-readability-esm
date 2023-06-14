@@ -1,8 +1,7 @@
-/* eslint-env node */
-var Readability = require("./Readability");
-var isProbablyReaderable = require("./Readability-readerable");
+import Readability from './Readability';
+import isProbablyReaderable from './Readability-readerable';
 
-module.exports = {
+export default {
   Readability: Readability,
-  isProbablyReaderable: isProbablyReaderable
+  isProbablyReaderable: isProbablyReaderable,
 };
