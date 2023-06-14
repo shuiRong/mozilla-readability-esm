@@ -19,7 +19,7 @@
  * Public constructor.
  * @param {HTMLDocument} doc     The document to parse.
  * @param {Object}       options The options object.
- */ function $6ae92e4ef72b7a13$var$Readability(doc, options) {
+ */ function $6ae92e4ef72b7a13$export$1e90011ded576fc9(doc, options) {
     // In some older versions, people passed a URI as the first argument. Cope:
     if (options && options.documentElement) {
         doc = options;
@@ -73,7 +73,7 @@
         };
     } else this.log = function() {};
 }
-$6ae92e4ef72b7a13$var$Readability.prototype = {
+$6ae92e4ef72b7a13$export$1e90011ded576fc9.prototype = {
     FLAG_STRIP_UNLIKELYS: 0x1,
     FLAG_WEIGHT_CLASSES: 0x2,
     FLAG_CLEAN_CONDITIONALLY: 0x4,
@@ -1833,7 +1833,6 @@ $6ae92e4ef72b7a13$var$Readability.prototype = {
         };
     }
 };
-var $6ae92e4ef72b7a13$export$2e2bcd8739ae039 = $6ae92e4ef72b7a13$var$Readability;
 
 
 /*
@@ -1863,14 +1862,7 @@ function $c7c20923a0aba2d3$var$isNodeVisible(node) {
     // Have to null-check node.style and node.className.indexOf to deal with SVG and MathML nodes.
     return (!node.style || node.style.display != "none") && !node.hasAttribute("hidden") && (!node.hasAttribute("aria-hidden") || node.getAttribute("aria-hidden") != "true" || node.className && node.className.indexOf && node.className.indexOf("fallback-image") !== -1);
 }
-/**
- * Decides whether or not the document is reader-able without parsing the whole thing.
- * @param {Object} options Configuration object.
- * @param {number} [options.minContentLength=140] The minimum node content length used to decide if the document is readerable.
- * @param {number} [options.minScore=20] The minumum cumulated 'score' used to determine if the document is readerable.
- * @param {Function} [options.visibilityChecker=isNodeVisible] The function used to determine if a node is visible.
- * @return {boolean} Whether or not we suspect Readability.parse() will suceeed at returning an article object.
- */ function $c7c20923a0aba2d3$var$isProbablyReaderable(doc, options = {}) {
+function $c7c20923a0aba2d3$export$a4ca2693929a0329(doc, options = {}) {
     // For backward compatibility reasons 'options' can either be a configuration object or the function used
     // to determine if a node is visible.
     if (typeof options == "function") options = {
@@ -1913,14 +1905,9 @@ function $c7c20923a0aba2d3$var$isNodeVisible(node) {
         return false;
     });
 }
-var $c7c20923a0aba2d3$export$2e2bcd8739ae039 = $c7c20923a0aba2d3$var$isProbablyReaderable;
 
 
-var $a955652e5b96d149$export$2e2bcd8739ae039 = {
-    Readability: (0, $6ae92e4ef72b7a13$export$2e2bcd8739ae039),
-    isProbablyReaderable: (0, $c7c20923a0aba2d3$export$2e2bcd8739ae039)
-};
 
 
-export {$a955652e5b96d149$export$2e2bcd8739ae039 as default};
+export {$6ae92e4ef72b7a13$export$1e90011ded576fc9 as Readability, $c7c20923a0aba2d3$export$a4ca2693929a0329 as isProbablyReaderable};
 //# sourceMappingURL=index.mjs.map

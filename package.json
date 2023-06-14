@@ -9,7 +9,8 @@
   "scripts": {
     "test": "mocha test/test-*.js",
     "generate-testcase": "node test/generate-testcase.js",
-    "release": "release-it"
+    "release": "release-it",
+    "build": "parcel build"
   },
   "repository": {
     "type": "git",

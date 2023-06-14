@@ -1,13 +1,9 @@
-function $parcel$defineInteropFlag(a) {
-  Object.defineProperty(a, '__esModule', {value: true, configurable: true});
-}
 function $parcel$export(e, n, v, s) {
   Object.defineProperty(e, n, {get: v, set: s, enumerable: true, configurable: true});
 }
 
-$parcel$defineInteropFlag(module.exports);
-
-$parcel$export(module.exports, "default", () => $aa9cd478700d20a0$export$2e2bcd8739ae039);
+$parcel$export(module.exports, "Readability", () => $59bd74d6cb5cf9c3$export$1e90011ded576fc9);
+$parcel$export(module.exports, "isProbablyReaderable", () => $6836a2d1efe7c321$export$a4ca2693929a0329);
 /*
  * Copyright (c) 2010 Arc90 Inc
  *
@@ -29,7 +25,7 @@ $parcel$export(module.exports, "default", () => $aa9cd478700d20a0$export$2e2bcd8
  * Public constructor.
  * @param {HTMLDocument} doc     The document to parse.
  * @param {Object}       options The options object.
- */ function $59bd74d6cb5cf9c3$var$Readability(doc, options) {
+ */ function $59bd74d6cb5cf9c3$export$1e90011ded576fc9(doc, options) {
     // In some older versions, people passed a URI as the first argument. Cope:
     if (options && options.documentElement) {
         doc = options;
@@ -83,7 +79,7 @@ $parcel$export(module.exports, "default", () => $aa9cd478700d20a0$export$2e2bcd8
         };
     } else this.log = function() {};
 }
-$59bd74d6cb5cf9c3$var$Readability.prototype = {
+$59bd74d6cb5cf9c3$export$1e90011ded576fc9.prototype = {
     FLAG_STRIP_UNLIKELYS: 0x1,
     FLAG_WEIGHT_CLASSES: 0x2,
     FLAG_CLEAN_CONDITIONALLY: 0x4,
@@ -1843,7 +1839,6 @@ $59bd74d6cb5cf9c3$var$Readability.prototype = {
         };
     }
 };
-var $59bd74d6cb5cf9c3$export$2e2bcd8739ae039 = $59bd74d6cb5cf9c3$var$Readability;
 
 
 /*
@@ -1873,14 +1868,7 @@ function $6836a2d1efe7c321$var$isNodeVisible(node) {
     // Have to null-check node.style and node.className.indexOf to deal with SVG and MathML nodes.
     return (!node.style || node.style.display != "none") && !node.hasAttribute("hidden") && (!node.hasAttribute("aria-hidden") || node.getAttribute("aria-hidden") != "true" || node.className && node.className.indexOf && node.className.indexOf("fallback-image") !== -1);
 }
-/**
- * Decides whether or not the document is reader-able without parsing the whole thing.
- * @param {Object} options Configuration object.
- * @param {number} [options.minContentLength=140] The minimum node content length used to decide if the document is readerable.
- * @param {number} [options.minScore=20] The minumum cumulated 'score' used to determine if the document is readerable.
- * @param {Function} [options.visibilityChecker=isNodeVisible] The function used to determine if a node is visible.
- * @return {boolean} Whether or not we suspect Readability.parse() will suceeed at returning an article object.
- */ function $6836a2d1efe7c321$var$isProbablyReaderable(doc, options = {}) {
+function $6836a2d1efe7c321$export$a4ca2693929a0329(doc, options = {}) {
     // For backward compatibility reasons 'options' can either be a configuration object or the function used
     // to determine if a node is visible.
     if (typeof options == "function") options = {
@@ -1923,13 +1911,8 @@ function $6836a2d1efe7c321$var$isNodeVisible(node) {
         return false;
     });
 }
-var $6836a2d1efe7c321$export$2e2bcd8739ae039 = $6836a2d1efe7c321$var$isProbablyReaderable;
 
 
-var $aa9cd478700d20a0$export$2e2bcd8739ae039 = {
-    Readability: (0, $59bd74d6cb5cf9c3$export$2e2bcd8739ae039),
-    isProbablyReaderable: (0, $6836a2d1efe7c321$export$2e2bcd8739ae039)
-};
 
 
 //# sourceMappingURL=index.js.map

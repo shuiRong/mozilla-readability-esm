@@ -1,7 +1,2 @@
-import Readability from './Readability';
-import isProbablyReaderable from './Readability-readerable';
-
-export default {
-  Readability: Readability,
-  isProbablyReaderable: isProbablyReaderable,
-};
+export { Readability } from './Readability';
+export { isProbablyReaderable } from './Readability-readerable';

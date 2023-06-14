@@ -42,7 +42,7 @@ function isNodeVisible(node) {
  * @param {Function} [options.visibilityChecker=isNodeVisible] The function used to determine if a node is visible.
  * @return {boolean} Whether or not we suspect Readability.parse() will suceeed at returning an article object.
  */
-function isProbablyReaderable(doc, options = {}) {
+export function isProbablyReaderable(doc, options = {}) {
   // For backward compatibility reasons 'options' can either be a configuration object or the function used
   // to determine if a node is visible.
   if (typeof options == "function") {
@@ -101,5 +101,3 @@ function isProbablyReaderable(doc, options = {}) {
     return false;
   });
 }
-
-export default isProbablyReaderable;
