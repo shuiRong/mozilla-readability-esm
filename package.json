@@ -1,5 +1,5 @@
 {
-  "name": "@mozilla/readability",
+  "name": "mozilla-readability-esm",
   "version": "0.4.5",
   "description": "A standalone version of the readability library used for Firefox Reader View.",
   "source": "index.js",
